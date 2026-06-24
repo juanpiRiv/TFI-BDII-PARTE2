@@ -1,0 +1,15 @@
+{
+  "name": "tpi-bd2-parte2",
+  "version": "1.0.0",
+  "description": "CRUD simple de productos para TPI Bases de Datos II - Parte 2",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "backup:mac": "bash backup.sh",
+    "backup:win": "powershell -ExecutionPolicy Bypass -File backup.ps1"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "mongodb": "^6.8.0"
+  }
+}

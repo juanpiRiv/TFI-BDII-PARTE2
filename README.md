@@ -1,12 +1,12 @@
 # TPI BDII - Parte 2
 
-Aplicacion backend minima en Node.js para demostrar CRUD sobre la coleccion `productos` de MongoDB Atlas usando el driver nativo.
+Aplicacion backend minima en Node.js para demostrar CRUD sobre la coleccion `Productos` de MongoDB Atlas usando el driver nativo.
 
 ## Que hace este proyecto
 
 - Se conecta a MongoDB Atlas con `MONGODB_URI`.
 - Usa la base indicada por `DB_NAME`.
-- Trabaja sobre la coleccion `productos`.
+- Trabaja sobre la coleccion `Productos`.
 - Ejecuta una demo CRUD completa en `app.js`:
 	- CREATE de un producto de ejemplo.
 	- READ de productos activos (`eliminado: false`).
@@ -31,7 +31,7 @@ Contenido esperado:
 
 ```env
 MONGODB_URI=mongodb+srv://USUARIO:PASSWORD@CLUSTER.mongodb.net/
-DB_NAME=delivery_tpi
+DB_NAME=TFI-BaseDeDatos2
 ```
 
 En Windows PowerShell podes usar:

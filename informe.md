@@ -4,10 +4,10 @@
 En esta parte se conecto la base de datos MongoDB Atlas del sistema de delivery con una aplicacion backend simple en Node.js.
 
 ## 2. Coleccion utilizada
-Se eligio la coleccion productos porque permite demostrar de forma clara las operaciones de alta, lectura, modificacion y baja logica sobre el catalogo del sistema.
+Se eligio la coleccion Productos porque permite demostrar de forma clara las operaciones de alta, lectura, modificacion y baja logica sobre el catalogo del sistema.
 
 ## 3. Operaciones CRUD implementadas
-- CREATE: inserta un producto en la coleccion productos.
+- CREATE: inserta un producto en la coleccion Productos.
 - READ: consulta productos activos.
 - UPDATE: modifica campos especificos usando `$set`.
 - DELETE: aplica baja logica en lugar de eliminar fisicamente.

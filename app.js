@@ -11,7 +11,7 @@ if (!uri || !dbName) {
 
 const client = new MongoClient(uri);
 const db = client.db(dbName);
-const productos = db.collection('productos');
+const productos = db.collection('Productos');
 
 async function crearProducto(producto) {
   try {

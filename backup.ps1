@@ -1,8 +1,11 @@
+# Equivalente al set -e de bash: ante cualquier error, el script frena.
 $ErrorActionPreference = "Stop"
 
+# Nos paramos en la carpeta del script para que los resguardos queden al lado del proyecto.
 Set-Location -Path $PSScriptRoot
 Write-Host "[INFO] Iniciando backup de MongoDB Atlas..."
 
+# Sin mongodump no podemos hacer el backup, asi que validamos que exista antes de seguir.
 $mongodumpCmd = Get-Command mongodump -ErrorAction SilentlyContinue
 if (-not $mongodumpCmd) {
   Write-Host "[ERROR] mongodump no esta instalado o no esta en PATH."
@@ -10,6 +13,8 @@ if (-not $mongodumpCmd) {
   exit 1
 }
 
+# PowerShell no lee .env solo, asi que lo parseamos a mano: leemos linea por linea,
+# salteamos vacias y comentarios (#), y cargamos cada par CLAVE=VALOR como variable de entorno.
 if (Test-Path ".env") {
   Write-Host "[INFO] Leyendo variables desde .env"
   Get-Content ".env" | ForEach-Object {
@@ -33,6 +38,7 @@ if ([string]::IsNullOrWhiteSpace($uri) -or [string]::IsNullOrWhiteSpace($dbName)
   exit 1
 }
 
+# Una subcarpeta por fecha, asi no se pisan los backups de dias distintos.
 $fecha = Get-Date -Format "yyyy-MM-dd"
 $destino = Join-Path ".\resguardos_tpi" $fecha
 

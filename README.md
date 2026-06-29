@@ -1,5 +1,12 @@
 # TPI BDII - Parte 2
 
+## Integrantes
+
+- Nicolás Otaño
+- Juan Pablo Rivero Albornoz
+
+---
+
 Aplicacion backend minima en Node.js para demostrar CRUD sobre la coleccion `Productos` de MongoDB Atlas usando el driver nativo.
 
 ## Que hace este proyecto
